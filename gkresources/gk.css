@@ -238,8 +238,9 @@ main {
     height: 300px;
     font-size: 60px;
     padding: 20px;
-    justify-content: center;
-    text-align: center;
+    justify-content: flex-end;
+    align-items: flex-end;
+    text-align: right;
   }
 
   /* Make nav full width at the top */
