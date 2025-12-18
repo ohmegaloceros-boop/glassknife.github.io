@@ -134,3 +134,66 @@ main {
   color: red;
 }
 
+/* Mobile responsive styles */
+@media screen and (max-width: 768px) {
+  /* Make body stack vertically */
+  body {
+    flex-direction: column;
+    height: auto;
+  }
+
+  /* Make left column full width and not fixed */
+  h1 {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    font-size: 60px;
+    padding: 20px;
+    justify-content: center;
+    text-align: center;
+  }
+
+  /* Make nav full width at the top */
+  nav {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 15px;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  nav a {
+    width: 70px;
+    height: 45px;
+    font-size: 14px;
+  }
+
+  /* Make main content full width */
+  main {
+    margin-left: 0;
+    width: 100%;
+    padding: 30px 20px;
+    text-align: center;
+  }
+
+  /* Make scroll box full width and not fixed */
+  .side-scroll {
+    position: relative;
+    width: 100%;
+    height: auto;
+    right: auto;
+    top: auto;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .side-scroll .side-links {
+    align-items: center;
+  }
+
+  p {
+    text-align: center;
+  }
+}
+
