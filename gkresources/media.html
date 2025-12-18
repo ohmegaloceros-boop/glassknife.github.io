@@ -25,6 +25,57 @@
 			<li><a href="https://glassknife.bandcamp.com/track/practice-wav-wav" target="_blank" rel="noopener">Bandcamp</a></li>
 			<li><a href="https://www.youtube.com/@GlassKnife-gk666" target="_blank" rel="noopener">YouTube</a></li>
 		</ul>
+		
+		<h3 style="margin:20px 0 12px 0;">Photos</h3>
+		<div class="gallery">
+			<img src="426.jpg" alt="Our first show in the alley 4.26.25" class="gallery-thumbnail" onclick="openLightbox(0)">
+			<img src="d31.jpg" alt="Dec. 11th @D3 Arts" class="gallery-thumbnail" onclick="openLightbox(1)">
+			<img src="d32.jpg" alt="Dec. 11th @D3 Arts" class="gallery-thumbnail" onclick="openLightbox(2)">
+			<img src="d33.jpg" alt="Dec. 11th @D3 Arts" class="gallery-thumbnail" onclick="openLightbox(3)">
+			<img src="d34.jpg" alt="Dec. 11th @D3 Arts" class="gallery-thumbnail" onclick="openLightbox(4)">
+			<img src="d35.jpg" alt="Dec. 11th @D3 Arts" class="gallery-thumbnail" onclick="openLightbox(5)">
+			<img src="d36.jpg" alt="Dec. 11th @D3 Arts" class="gallery-thumbnail" onclick="openLightbox(6)">
+			<img src="alleyfest1.jpg" alt="AlleyFest 9.27.25" class="gallery-thumbnail" onclick="openLightbox(7)">
+		</div>
 	</div>
+
+	<!-- Lightbox -->
+	<div id="lightbox" class="lightbox">
+		<span class="close" onclick="closeLightbox()">&times;</span>
+		<span class="prev" onclick="changeImage(-1)">&#10094;</span>
+		<span class="next" onclick="changeImage(1)">&#10095;</span>
+		<img id="lightbox-img" src="" alt="Glass Knife">
+	</div>
+
+	<script>
+		const images = ['426.jpg', 'd31.jpg', 'd32.jpg', 'd33.jpg', 'd34.jpg', 'd35.jpg', 'd36.jpg', 'alleyfest1.jpg'];
+		let currentIndex = 0;
+
+		function openLightbox(index) {
+			currentIndex = index;
+			document.getElementById('lightbox').style.display = 'flex';
+			document.getElementById('lightbox-img').src = images[currentIndex];
+			document.body.style.overflow = 'hidden';
+		}
+
+		function closeLightbox() {
+			document.getElementById('lightbox').style.display = 'none';
+			document.body.style.overflow = 'auto';
+		}
+
+		function changeImage(direction) {
+			currentIndex += direction;
+			if (currentIndex < 0) currentIndex = images.length - 1;
+			if (currentIndex >= images.length) currentIndex = 0;
+			document.getElementById('lightbox-img').src = images[currentIndex];
+		}
+
+		// Close on Escape key
+		document.addEventListener('keydown', function(event) {
+			if (event.key === 'Escape') closeLightbox();
+			if (event.key === 'ArrowLeft') changeImage(-1);
+			if (event.key === 'ArrowRight') changeImage(1);
+		});
+	</script>
 </body>
 </html>
