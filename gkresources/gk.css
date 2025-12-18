@@ -139,6 +139,10 @@ main {
   color: red;
 }
 
+s a {
+  text-decoration: line-through;
+}
+
 /* Gallery styles */
 .gallery {
   display: grid;
