@@ -1,2 +1,1 @@
-My gf clay is so cool AND smart
- ANDDDD beautiful
+THis is the page for the Denver band Glass Knife
