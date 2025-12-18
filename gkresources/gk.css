@@ -176,7 +176,7 @@ main {
     margin-left: 0;
     width: 100%;
     padding: 30px 20px;
-    text-align: center;
+    text-align: right;
   }
 
   /* Make scroll box full width and not fixed */
@@ -186,16 +186,16 @@ main {
     height: auto;
     right: auto;
     top: auto;
-    text-align: center;
+    text-align: right;
     padding: 20px;
   }
 
   .side-scroll .side-links {
-    align-items: center;
+    align-items: flex-end;
   }
 
   p {
-    text-align: center;
+    text-align: right;
   }
 }
 
