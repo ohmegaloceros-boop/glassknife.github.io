@@ -1,82 +1,3 @@
-<html lang="en">
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width,initial-scale=1">
-	<title>Glass Knife — Live</title>
-	<link rel="stylesheet" href="gk.css">
-</head>
-<body class="live-page">
-	<nav>
-		<a href="media.html">media</a>
-		<a href="merch.html">merch</a>
-		<a href="live.html">live</a>
-		<a href="contact.html">contact</a>
-		<a href="../index.html">home</a>
-	</nav>
-	<header>
-		<h1>Live</h1>
-	</header>
-	<main>
-		<p></p>
-	</main>
-	<div class="side-scroll">
-		<h3>Upcoming Shows</h3>
-		<p>jan 25 @ <a href="https://globehall.com/event/thiefs-w-glass-knife-unskilled-labor-man-ape/globe-hall/denver-colorado/" target="_blank">Globe Hall</a></p>
-
-		<h3>Past Shows</h3>
-		<p>dec 11 @ <a href="https://www.d3arts.org/" target="_blank">D3 arts</a></p>
-		<p>sep 27 @ Alley Fest</p>
-		<p>aug 7 @ <a href="https://www.7thcirclemusiccollective.org/" target="_blank">Seventh Circle</a></p>
-		<p>june 13 @ <a href="https://larimerlounge.com/" target="_blank">Larimer Lounge</a></p>
-		<p>apr 26 @ Alley Party</p>
-
-		<h3>Flyers</h3>
-		<div class="gallery" id="flyers-gallery">
-			<img src="../gkresources/Flyers/D3.png" alt="Flyer for D3 Arts" class="gallery-thumbnail" onclick="openFlyerLightbox(0)">
-			<img src="../gkresources/Flyers/Alley Fest.png" alt="Flyer for Alley Fest" class="gallery-thumbnail" onclick="openFlyerLightbox(1)">
-			<img src="../gkresources/Flyers/7th Circle.png" alt="Flyer for 7th Circle" class="gallery-thumbnail" onclick="openFlyerLightbox(2)">
-			<img src="../gkresources/Flyers/Alley Party.jpg" alt="Flyer for Alley Party" class="gallery-thumbnail" onclick="openFlyerLightbox(3)">
-		</div>
-	</div>
-
-	<!-- Flyers Lightbox -->
-	<div id="flyers-lightbox" class="lightbox">
-		<span class="close" onclick="closeFlyerLightbox()">&times;</span>
-		<span class="prev" onclick="changeFlyerImage(-1)">&#10094;</span>
-		<span class="next" onclick="changeFlyerImage(1)">&#10095;</span>
-		<img id="flyers-lightbox-img" src="" alt="Flyer">
-	</div>
-
-	<script>
-	const flyerImages = ['D3.png', '7th Circle.png', 'Alley Fest.png', 'Alley Party.jpg'];
-	let flyerIndex = 0;
-
-	function openFlyerLightbox(index) {
-		flyerIndex = index;
-		document.getElementById('flyers-lightbox').style.display = 'flex';
-		document.getElementById('flyers-lightbox-img').src = flyerImages[flyerIndex];
-		document.body.style.overflow = 'hidden';
-	}
-
-	function closeFlyerLightbox() {
-		document.getElementById('flyers-lightbox').style.display = 'none';
-		document.body.style.overflow = 'auto';
-	}
-
-	function changeFlyerImage(direction) {
-		flyerIndex += direction;
-		if (flyerIndex < 0) flyerIndex = flyerImages.length - 1;
-		if (flyerIndex >= flyerImages.length) flyerIndex = 0;
-		document.getElementById('flyers-lightbox-img').src = flyerImages[flyerIndex];
-	}
-
-	// Close on Escape key for flyers lightbox
-	document.addEventListener('keydown', function(event) {
-		if (document.getElementById('flyers-lightbox').style.display === 'flex') {
-			if (event.key === 'Escape') closeFlyerLightbox();
-			if (event.key === 'ArrowLeft') changeFlyerImage(-1);
-			if (event.key === 'ArrowRight') changeFlyerImage(1);
-		}
 <!-- ============================= -->
 <!-- Glass Knife Live Page         -->
 <!-- ============================= -->
@@ -89,6 +10,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<title>Glass Knife — Live</title>
+	<link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="gk.css">
 </head>
 
@@ -100,7 +22,7 @@
 		<a href="merch.html">merch</a>
 		<a href="live.html">live</a>
 		<a href="contact.html">contact</a>
-		<a href="../index.html">home</a>
+		<a href="index.html">home</a>
 	</nav>
 
 	<!-- ===== Header Section ===== -->
